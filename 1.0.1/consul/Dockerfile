@@ -4,7 +4,7 @@ ENV CONSUL_VERSION 1.0.1
 ENV CONSUL_SHA256 b350591af10d7d23514ebaa0565638539900cdb3aaa048f077217c4c46653dd8 
 
 RUN apk --no-cache add curl ca-certificates \
-    && curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip -o /tmp/consul.zip \
+    && curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip > /tmp/consul_${CONSUL_VERSION}_linux_amd64.zipconsul.zip \
     && echo "${CONSUL_SHA256}  /tmp/consul.zip" > /tmp/consul.sha256 \
     && sha256sum -c /tmp/consul.sha256 \
     && cd /bin \
