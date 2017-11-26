@@ -1,3 +1,3 @@
 
 build:
-	docker build -t gliderlabs/consul:$(VERSION) .
+	docker build -t adan92/consul:$(VERSION) .
